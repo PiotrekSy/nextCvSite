@@ -9,5 +9,16 @@ import '@fontsource/roboto/700.css';
 export default function App({ Component, pageProps }) {
   console.log('whole app render')
 
+  useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if (isMobile && !prefersLight) {
+      document.documentElement.classList.add('force-light-mode');
+    }
+  }, []);
+
+
+
   return <Component {...pageProps} />;
 };
