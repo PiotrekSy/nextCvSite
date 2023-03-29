@@ -10,7 +10,7 @@ import { ScrollToTopOnMount, SectionsContainer } from 'react-fullpage';
 const HomePage = () => {
 
     let options = {
-        // activeClass: 'active',
+        recordHistory: false,
         sectionClassName: 'Section',
         anchors: ['home', 'about', 'experience', 'skills', 'contact'],
         scrollBar: false,
