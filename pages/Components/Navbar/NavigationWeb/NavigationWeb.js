@@ -48,7 +48,7 @@ const NavigationWeb = () => {
                     Persistent dra
                 </Typography>
                 <Tabs value={false} onChange={handleChange} centered>
-                    <p></p><Tab disableRipple label="About Me" sx={{ color: 'white' }} href='#about' />
+                    <Tab disableRipple label="About Me" sx={{ color: 'white' }} href='#about' />
                     <Tab disableRipple label="Experience" sx={{ color: 'white' }} href='#experience' />
                     <Tab disableRipple label="Skills" sx={{ color: 'white' }} href='#skills' />
                     <Tab disableRipple label="Contact" sx={{ color: 'white' }} href='#contact' />
