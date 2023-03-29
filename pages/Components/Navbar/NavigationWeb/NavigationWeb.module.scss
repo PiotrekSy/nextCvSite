@@ -1,0 +1,13 @@
+.navbarText {
+    // color: #B42242;
+    color: white;
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+        color: #B42242;
+        text-shadow: 0 0 10px #8a1a56;
+    }
+}

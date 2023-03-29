@@ -46,7 +46,7 @@ export default function NavigationMobile({ scrollToTop }) {
                 position="fixed"
                 open={open}
                 sx={{
-                    backgroundColor: '#34094e82',
+                    backgroundColor: 'transparent',
                     height: '70px',
                     display: 'flex',
                     justifyContent: 'center'
