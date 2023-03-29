@@ -1,9 +1,6 @@
 import * as React from 'react';
 import styles from './Hero.module.scss';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 import { Section as FullPageSection } from 'react-fullpage';
 
 const Hero = () => {

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 import styles from './Skills.module.scss';
 import Container from '@mui/material/Container';
 import { Section as FullPageSection } from 'react-fullpage';

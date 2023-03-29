@@ -1,13 +1,9 @@
 import styles from './About.module.scss';
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 import { Section as FullPageSection } from 'react-fullpage';
 
 const About = () => {
-
     return <FullPageSection>
         <div className={styles.section}>
             <Container maxWidth="lg" sx={{ border: '1px solid red' }}>

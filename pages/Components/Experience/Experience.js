@@ -1,15 +1,9 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import styles from './Experience.module.scss';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-
 import { Section as FullPageSection } from 'react-fullpage';
 
 const Experience = () => {
-
     return <FullPageSection>
         <div className={styles.section}>
             <Container maxWidth="lg" sx={{ border: '1px solid red' }}>
