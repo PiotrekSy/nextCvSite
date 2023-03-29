@@ -52,9 +52,8 @@ const MobileDrawer = ({ handleDrawerClose, theme, open }) => {
                     height: '70px',
                     width: '100%',
                 }}>
-                {theme.direction === 'rtl' ?
-                    <ChevronLeftIcon /> :
-                    <ChevronRightIcon />}
+
+                <ChevronRightIcon />
             </IconButton>
             <Divider />
             <List>
