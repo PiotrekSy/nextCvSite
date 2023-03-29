@@ -1,9 +1,9 @@
-import styles from './About.module.scss';
 import * as React from 'react';
+import styles from './ContactForm.module.scss';
 import Container from '@mui/material/Container';
 import { Section as FullPageSection } from 'react-fullpage';
 
-const About = () => {
+const ContactForm = () => {
     return <FullPageSection>
         <div className={styles.section}>
             <Container maxWidth="lg" sx={{ border: '1px solid red' }}>
@@ -18,6 +18,6 @@ const About = () => {
             </Container>
         </div>
     </FullPageSection>
-};
+}
 
-export default About;
+export default ContactForm; 

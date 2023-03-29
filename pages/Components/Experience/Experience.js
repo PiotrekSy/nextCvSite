@@ -1,14 +1,14 @@
-import styles from './About.module.scss';
 import * as React from 'react';
+import styles from './Experience.module.scss';
 import Container from '@mui/material/Container';
 import { Section as FullPageSection } from 'react-fullpage';
 
-const About = () => {
+const Experience = () => {
     return <FullPageSection>
         <div className={styles.section}>
             <Container maxWidth="lg" sx={{ border: '1px solid red' }}>
                 <p>
-                    SKILLS
+                    ExP
                 </p>
                 <p >
                     Something short and leading about the collection below—its contents,
@@ -20,4 +20,4 @@ const About = () => {
     </FullPageSection>
 };
 
-export default About;
+export default Experience;
