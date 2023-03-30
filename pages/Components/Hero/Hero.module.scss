@@ -6,24 +6,69 @@
     width: 900px;
     top: -450px;
     left: -450px;
-    background: #e42f50;
-    box-shadow: 0 0 100px 200px #e42f50;
+    background: radial-gradient(#e42f50, #640216);
+    box-shadow: 0 0 100px 40px #e42f5039;
+    transition-property: box-shadow;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-out;
+
+    &:hover {
+        transition-property: box-shadow;
+        transition-duration: 1000ms;
+        transition-timing-function: ease-out;
+        box-shadow: 0 0 150px 20px #e42f5084;
+    }
 
     @media screen and (max-width: 900px) {
-        height: 450px
+        height: 550px
     }
 }
 
 .backgroundBlobTwo {
-    z-index: -1;
+    z-index: -2;
     position: absolute;
-    height: 600px;
-    width: 1200px;
-    bottom: -650px;
-    right: -400px;
-    border-radius: 50%;
-    background: #8a1b9d;
-    box-shadow: 0 0 100px 200px #8a1b9d;
+    height: 1200px;
+    width: 150%;
+    bottom: -950px;
+    right: -700px;
+    background: radial-gradient(#84039b, #1f0b22);
+    box-shadow: 0 0 100px 50px #8a1b9d32;
+    transform: rotate(-25deg);
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+        transition-property: box-shadow;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+        box-shadow: 0 0 150px 20px #8a1b9d5b;
+    }
+
+    @media screen and (max-width: 900px) {
+        height: 1200px;
+        width: 150%;
+        bottom: -950px;
+        right: -300px;
+    }
+}
+
+.backgroundBlobThree {
+    z-index: -20;
+    position: absolute;
+    height: 1200px;
+    width: 150%;
+    bottom: -100px;
+    right: -100px;
+    background: radial-gradient(#8a1b9d38, #8a1b9d39);
+    box-shadow: 0 0 100px 50px #8a1b9d32;
+    transform: rotate(5deg);
+
+    &:hover {
+        transition-property: box-shadow;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+    }
 
     @media screen and (max-width: 900px) {
         height: 550px
@@ -87,17 +132,17 @@
         width: 400px;
         height: 400px;
         border-radius: 100%;
-        top: calc(50% - 270px);
+        top: calc(50% - 170px);
         right: calc(50% - 450px);
         background: radial-gradient(at top left, #e42f50, #5e066d);
         transition-property: box-shadow;
-        transition-duration: 300ms;
+        transition-duration: 800ms;
         transition-timing-function: ease-out;
         box-shadow: 0 0 150px 50px #8a1a5670;
 
         &:hover {
             transition-property: box-shadow;
-            transition-duration: 300ms;
+            transition-duration: 800ms;
             transition-timing-function: ease-out;
             box-shadow: 0 0 150px 20px #8a1a56;
         }
@@ -118,12 +163,13 @@
         line-height: clamp(26px, 11.5vw, 85px);
         background: linear-gradient(to right, #c92fe4, #e42f50);
         -webkit-background-clip: text;
-        -webkit-text-stroke: 1.5px black;
+        -webkit-text-stroke: 2px black;
 
         @media screen and (max-width: 900px) {
             font-size: clamp(20px, 12vw, 80px);
             line-height: clamp(20px, 12.5vw, 85px);
             text-align: right;
+            -webkit-text-stroke: 1px black;
         }
     }
 
@@ -167,29 +213,7 @@
         }
     }
 
-    .button {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        width: 200px;
-        height: 70px;
-        border-radius: 20px;
-        border: none;
-        color: white;
-        margin-top: 30px;
-        background-color: #e42f50;
-        box-shadow: 0 0 15px 5px #b71a37 inset;
-        transition-property: background-color, box-shadow;
-        transition-duration: 300ms;
-        transition-timing-function: ease-in-out;
-
-        &:hover {
-            background-color: #8a1b9d;
-            box-shadow: 0 0 25px 5px #c0b9c1 inset, 0 0 20px 20px #8a1b9d;
-        }
-    }
+    
 }
 
 .whiteTextContainer {
@@ -204,10 +228,6 @@
         font-size: 20px;
         flex: 1;
         color: white;
-        // -webkit-text-fill-color: transparent;
-        // background: linear-gradient(to right, #e42f50, #c92fe4);
-        // -webkit-background-clip: text;
-        // -webkit-text-stroke: 4px transparent;
         text-align: left;
         -webkit-text-stroke: 1.5px black;
     }

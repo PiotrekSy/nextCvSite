@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    background: black;
+    -webkit-text-stroke: 7px transparent;
+}
+
+.logoText {
+    font-size: 35px;
+    color: transparent;
+    -webkit-text-fill-color: black;
+    background: linear-gradient(to right, #e42f50, #c92fe4);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
