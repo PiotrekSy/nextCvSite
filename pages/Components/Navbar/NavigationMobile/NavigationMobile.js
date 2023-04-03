@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
 import { styled, useTheme } from '@mui/material/styles';
+import styles from './NavigationMobile.module.scss';
 
 const drawerWidth = 300;
 
@@ -46,22 +47,17 @@ export default function NavigationMobile({ scrollToTop }) {
                 position="fixed"
                 open={open}
                 sx={{
-                    backgroundColor: '#34094e82',
                     height: '70px',
                     display: 'flex',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    background: 'transparent',
+                    boxShadow: 'none',
                 }}>
-                <Toolbar>
-                    <Typography variant="h6"
-                        noWrap
-                        href={`#home`}
-                        sx={{
-                            flexGrow: 1,
-                            textDecoration: 'none'
-                        }}
-                        component="a"
-                        onClick={scrollToTop}>
-                        Persistent drawer
+                <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none", color: "white" }} component="a" href='#home'>
+                        <div className={styles.logo}>
+                            <p className={styles.logoText}>PS</p>
+                        </div>
                     </Typography>
                     <IconButton
                         color="inherit"
@@ -69,8 +65,7 @@ export default function NavigationMobile({ scrollToTop }) {
                         edge="end"
                         onClick={handleDrawerOpen}
                         size="large"
-                        sx={{ ...(open && { display: 'none' }), padding: 4 }}
-                    >
+                        sx={{ ...(open && { display: 'none' }), padding: 4 }}>
                         <MenuIcon />
                     </IconButton>
                 </Toolbar>

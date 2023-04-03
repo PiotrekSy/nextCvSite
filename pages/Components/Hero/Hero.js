@@ -6,15 +6,21 @@ import { Section as FullPageSection } from 'react-fullpage';
 const Hero = () => {
     return <FullPageSection>
         <div className={styles.section}>
-            <Container maxWidth="lg" sx={{ border: '1px solid red' }}>
-                <p className = {styles.text}>
-                    SKILLS
-                </p>
-                <p className = {styles.text}>
-                    Something short and leading about the collection below—its contents,
-                    the creator, etc. Make it short and sweet, but not too short so folks
-                    don&apos;t simply skip over it entirely.
-                </p>
+            <div className={styles.backgroundBlobOne}></div>
+            <div className={styles.backgroundBlobTwo}></div>
+            <div className={styles.backgroundBlobThree}></div>
+            <Container maxWidth="lg" >
+                <div className={styles.colouredTextContainer}>
+                    <p className={styles.outlinedTextFull}>I BUILD</p>
+                    <div className={styles.colouredSmallText}>
+                        <div className={styles.circle}></div>
+                        <p className={styles.outlinedTextHalf}>responsive</p>
+                        <p className={styles.outlinedTextNone}>Web Apps</p>
+                        <p className={styles.whiteText}>I’m a frontend developer specializing in building digital </p>
+                        <p className={styles.whiteText}>experiences mainly using React.js and React Native.</p>
+                        <p className={styles.whiteText}>Currently I invest my time in learning MOBILE technologies.</p>
+                    </div>
+                </div>
             </Container>
         </div>
     </FullPageSection>

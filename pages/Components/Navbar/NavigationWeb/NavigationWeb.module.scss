@@ -1,0 +1,42 @@
+.navbarText {
+    color: #ca3858;
+    font-size: 18px;
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    background-color: transparent;
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    margin: 10px;
+    border-radius: 30px;
+    min-width: 150px;
+    border: none;
+
+    &:hover {
+        color: #c92fe4;
+        transition-property: color;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 80px;
+    width: 80px;
+    background: black;
+    -webkit-text-stroke: 7px transparent;
+}
+
+.logoText {
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-fill-color: black;
+    background: linear-gradient(to right, #e42f50, #c92fe4);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}

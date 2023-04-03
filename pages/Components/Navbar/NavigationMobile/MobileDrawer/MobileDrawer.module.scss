@@ -1,0 +1,26 @@
+.text {
+    font-size: 10px;
+}
+
+.icon {
+    color: transparent;
+    -webkit-text-fill-color: black;
+    background: linear-gradient(to right, #e42f50, #c92fe4);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
+
+.listItemText {
+    width: 100%;
+    text-align: right;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.listItemIcon {
+    width: 20%;
+    displaY: flex;
+    justify-content: center;
+    align-items: center;
+}
