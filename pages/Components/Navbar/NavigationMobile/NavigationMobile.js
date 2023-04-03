@@ -47,10 +47,11 @@ export default function NavigationMobile({ scrollToTop }) {
                 position="fixed"
                 open={open}
                 sx={{
-                    backgroundColor: 'transparent',
                     height: '70px',
                     display: 'flex',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    background: 'transparent',
+                    boxShadow: 'none',
                 }}>
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none", color: "white" }} component="a" href='#home'>
@@ -64,8 +65,7 @@ export default function NavigationMobile({ scrollToTop }) {
                         edge="end"
                         onClick={handleDrawerOpen}
                         size="large"
-                        sx={{ ...(open && { display: 'none' }), padding: 4 }}
-                    >
+                        sx={{ ...(open && { display: 'none' }), padding: 4 }}>
                         <MenuIcon />
                     </IconButton>
                 </Toolbar>
