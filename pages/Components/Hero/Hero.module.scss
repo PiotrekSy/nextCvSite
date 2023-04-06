@@ -84,6 +84,10 @@
     background-color: black;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 900px) {
+          min-height: 100vh;
+    }
 }
 
 .colouredTextContainer {
@@ -110,7 +114,7 @@
 
     @media screen and (max-width: 900px) {
         z-index: 100;
-        font-size: clamp(90px, 25vw, 155px);
+        font-size: clamp(70px, 15vw, 155px);
         flex-direction: column;
     }
 }
