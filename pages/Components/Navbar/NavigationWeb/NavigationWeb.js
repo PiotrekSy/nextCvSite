@@ -52,11 +52,11 @@ const NavigationWeb = () => {
                     </div>
                 </Typography>
                 <Tabs value={false} onChange={handleChange} centered>
-                    <Tab disableRipple className={styles.navbarText} label="About Me" href='#about' />
-                    <Tab disableRipple className={styles.navbarText} label="Experience" href='#experience' />
-                    <Tab disableRipple className={styles.navbarText} label="Skills" href='#skills' />
-                    <Tab disableRipple className={styles.navbarText} label="Contact" href='#contact' />
-                    <Tab disableRipple className={styles.navbarText} label="RESUME" />
+                    <Tab disableRipple className={styles.navbarText} label="About Me" href='#about' sx={{ color: 'lightgrey' }} />
+                    <Tab disableRipple className={styles.navbarText} label="Experience" href='#experience' sx={{ color: 'lightgrey' }} />
+                    <Tab disableRipple className={styles.navbarText} label="Skills" href='#skills' sx={{ color: 'lightgrey' }} />
+                    <Tab disableRipple className={styles.navbarText} label="Contact" href='#contact' sx={{ color: 'lightgrey' }} />
+                    <Tab disableRipple className={styles.navbarText} label="RESUME" sx={{ color: 'lightgrey' }} />
                 </Tabs>
             </Toolbar>
         </AppBar>
