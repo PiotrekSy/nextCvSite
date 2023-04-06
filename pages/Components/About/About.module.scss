@@ -116,8 +116,17 @@
         }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 899px) {
+        z-index: -3;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         .avatarContainer {
+            scale: 0.8;
             position: relative;
             height: 350px;
             width: 350px;
@@ -137,7 +146,6 @@
                 justify-content: center;
                 border-radius: 50%;
                 overflow: hidden;
-
             }
 
             .curvedText {
@@ -152,13 +160,9 @@
                     transform: rotate(-360deg)
                 }
 
-                ;
-
                 100% {
                     transform: rotate(0deg)
                 }
-
-                ;
             }
 
             .curvedText span {
@@ -168,7 +172,6 @@
                 font-size: 34px;
                 color: white;
                 transform-origin: 0 175px;
-
             }
         }
 
@@ -187,8 +190,83 @@
                 align-items: flex-end;
                 justify-content: right;
                 text-align: center;
-
                 font-size: clamp(13px, 3.5vw, 26px);
+                line-height: clamp(16px, 22px, 22px);
+                -webkit-text-stroke: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 899px) and (orientation: landscape) {
+        flex-direction: row;
+
+        .avatarContainer {
+            scale: 0.8;
+            position: relative;
+            height: 350px;
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            font-weight: 800;
+
+            .innerAvatarContainer {
+                position: relative;
+                height: 280px;
+                width: 280px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .curvedText {
+                position: absolute;
+                height: 350px;
+                width: 350px;
+                animation: rotateText 40s linear infinite;
+            }
+
+            @keyframes rotateText {
+                0% {
+                    transform: rotate(-360deg)
+                }
+
+                100% {
+                    transform: rotate(0deg)
+                }
+            }
+
+            .curvedText span {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                font-size: 34px;
+                color: white;
+                transform-origin: 0 175px;
+            }
+        }
+
+        .textContainer {
+            position: relative;
+            width: 50%;
+
+            .greeting {
+                text-align: left;
+                font-size: 23px;
+                color: white;
+                margin: 25px 0 10px 0;
+            }
+
+            .description {
+                display: flex;
+                align-items: flex-end;
+                justify-content: right;
+                text-align: left;
+                font-size: clamp(13px, 2vw, 26px);
                 line-height: clamp(16px, 22px, 22px);
                 -webkit-text-stroke: 0;
             }

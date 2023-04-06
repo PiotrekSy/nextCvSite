@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import { Section as FullPageSection } from 'react-fullpage';
 
 const Hero = () => {
-    return <FullPageSection>
+    return <FullPageSection style={{ pointerEvents: 'none' }}>
         <div className={styles.section}>
             <div className={styles.backgroundBlobOne}></div>
             <div className={styles.backgroundBlobTwo}></div>

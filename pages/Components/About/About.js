@@ -19,16 +19,16 @@ const curvedText = text.split("")
 
 const About = ({ direction }) => {
 
-    return <FullPageSection >
+    return <FullPageSection style={{ pointerEvents: 'none' }}>
         <div className={styles.section}>
-            <div className={styles.backgroundShapeOne} />
-            <div className={styles.backgroundShapeTwo} />
-            <Container maxWidth="lg"
+            <Container Container maxWidth="lg"
                 sx={{
                     display: 'flex',
                     flexDirection: direction,
                     alignItems: 'center'
-                }}>
+                }} >
+                <div className={styles.backgroundShapeOne} />
+                <div className={styles.backgroundShapeTwo} />
                 <div className={styles.avatarContainer}>
                     <p className={styles.curvedText}>{curvedText}</p>
                     <div className={styles.innerAvatarContainer}>

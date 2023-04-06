@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import { Section as FullPageSection } from 'react-fullpage';
 
 const ContactForm = () => {
-    return <FullPageSection>
+    return <FullPageSection style={{ pointerEvents: 'none' }}>
         <div className={styles.section}>
             <Container maxWidth="lg" sx={{ border: '1px solid red' }}>
                 <p className = {styles.text}>

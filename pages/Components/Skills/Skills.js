@@ -5,7 +5,7 @@ import { Section as FullPageSection } from 'react-fullpage';
 
 const Skills = ({ direction }) => {
 
-  return <FullPageSection>
+  return <FullPageSection style={{ pointerEvents: 'none' }}>
     <div className={styles.section}>
       <div className={styles.backgroundShapeOne} />
       <div className={styles.backgroundShapeTwo} />

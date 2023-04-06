@@ -86,7 +86,7 @@
     align-items: center;
 
     @media screen and (max-width: 900px) {
-          min-height: 100vh;
+        height: 100vh;
     }
 }
 
@@ -103,7 +103,7 @@
 }
 
 .outlinedTextFull {
-    font-size: clamp(120px, 10vw, 155px);
+    font-size: clamp(130px, 10vw, 155px);
     flex: 1;
     color: transparent;
     -webkit-text-fill-color: black;
@@ -114,8 +114,13 @@
 
     @media screen and (max-width: 900px) {
         z-index: 100;
-        font-size: clamp(70px, 15vw, 155px);
+        font-size: clamp(90px, 20vw, 155px);
         flex-direction: column;
+    }
+
+    @media screen and (max-width: 900px) and (orientation: landscape) {
+        font-size: clamp(60px, 12vw, 110px);
+        -webkit-text-stroke: 4px transparent;
     }
 }
 
@@ -129,6 +134,8 @@
     @media screen and (max-width: 900px) {
         align-items: flex-end;
     }
+
+
 
     .circle {
         z-index: -1;
@@ -157,6 +164,9 @@
             top: calc(50% - 300px);
             right: calc(50% - 100px);
         }
+
+
+
     }
 
     .outlinedTextHalf {
@@ -175,6 +185,11 @@
             text-align: right;
             -webkit-text-stroke: 1px black;
         }
+
+        @media screen and (max-width: 900px) and (orientation: landscape) {
+            font-size: clamp(16px, 8vw, 50px);
+            line-height: clamp(18px, 10vw, 55px);
+        }
     }
 
     .outlinedTextNone {
@@ -192,6 +207,11 @@
             text-align: right;
             margin-top: 0;
             -webkit-text-stroke: 0.2px black;
+        }
+
+        @media screen and (max-width: 900px) and (orientation: landscape) {
+            font-size: clamp(16px, 8vw, 50px);
+            line-height: clamp(14px, 7vw, 50px);
         }
     }
 
@@ -214,6 +234,11 @@
             font-size: clamp(13px, 2.8vw, 22px);
             line-height: clamp(16px, 22px, 22px);
             -webkit-text-stroke: 0;
+        }
+
+        @media screen and (max-width: 900px) and (orientation: landscape) {
+            font-size: clamp(16px, 1.8vw, 50px);
+            line-height: clamp(14px, 2.2vw, 50px);
         }
     }
 }

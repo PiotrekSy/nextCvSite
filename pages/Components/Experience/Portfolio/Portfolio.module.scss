@@ -2,23 +2,20 @@
     z-index: -3;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
     width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
 
     .textContainer {
         border: 1px solid red;
         height: 50vh;
     }
 
-    .portfolioContainer {
-        border: 1px solid red;
-        height: 50vh
-    }
 
     @media (max-width: 900px) {}
 
