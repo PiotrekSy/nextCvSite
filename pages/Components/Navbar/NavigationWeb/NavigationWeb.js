@@ -46,7 +46,7 @@ const NavigationWeb = () => {
                 boxShadow: 'none'
             }}>
             <Toolbar>
-                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none"}} component="a" href='#home'>
+                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none" }} href='#home'>
                     <div className={styles.logo}>
                         <p className={styles.logoText}>PS</p>
                     </div>
