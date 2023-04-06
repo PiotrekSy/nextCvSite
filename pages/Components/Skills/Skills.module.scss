@@ -24,10 +24,7 @@
         transition-timing-function: ease-in-out;
 
         @media screen and (max-width: 900px) {
-            height: 1200px;
-            width: 150%;
-            bottom: -950px;
-            right: -300px;
+            display: none;
         }
     }
 
@@ -46,7 +43,7 @@
         }
 
         @media screen and (max-width: 900px) {
-            height: 550px
+            height: 100%;
         }
     }
 }

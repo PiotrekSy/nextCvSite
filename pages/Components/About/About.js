@@ -5,13 +5,21 @@ import { Section as FullPageSection } from 'react-fullpage';
 import Image from 'next/image';
 
 const text = 'PIOTR SYJUD - FRONTEND DEVELOPER - ';
-const curvedText = text.split("")
-    .map((item, index) => <span key={index} style={{ transform: `rotate(${index * 10.4}deg)`, display: 'flex', alignItems: 'center' }}>{item}</span>);
 
+const curvedText = text.split("")
+    .map((item, index) =>
+        <span key={index}
+            style={{
+                transform: `rotate(${index * 10.4}deg)`,
+                display: 'flex',
+                alignItems: 'center'
+            }}>
+            {item}
+        </span>);
 
 const About = ({ direction }) => {
 
-    return <FullPageSection>
+    return <FullPageSection >
         <div className={styles.section}>
             <div className={styles.backgroundShapeOne} />
             <div className={styles.backgroundShapeTwo} />
@@ -27,8 +35,8 @@ const About = ({ direction }) => {
                         <Image
                             className={styles.avatarBackground}
                             src='/avatar.svg'
-                            width={380}
-                            height={380}
+                            width={330}
+                            height={330}
                             alt="avatar"
                         />
                     </div>
