@@ -6,6 +6,7 @@ import Navbar from "../Navbar";
 import Experience from '../Experience';
 import ContactForm from '../ContactForm';
 import { ScrollToTopOnMount, SectionsContainer } from 'react-fullpage';
+import { useState, useEffect } from 'react';
 
 const HomePage = () => {
 
@@ -19,16 +20,21 @@ const HomePage = () => {
         arrowNavigation: true
     };
 
+    const [windowSize, setWindowSize] = useState();
+    useEffect(() => setWindowSize(window.innerWidth), []);
+    useEffect(() => window.onresize = () => setWindowSize(window.innerWidth), []);
+    const direction = windowSize < 900 ? 'column' : 'row';
+
     return (
         <>
-            <Navbar />
+            <Navbar direction={direction} />
             <ScrollToTopOnMount />
             <SectionsContainer className="container" {...options}>
                 <Hero />
-                <About />
-                <Experience />
-                <Skills />
-                <ContactForm />
+                <About direction={direction} />
+                <Experience direction={direction} />
+                <Skills direction={direction} />
+                <ContactForm direction={direction} />
             </SectionsContainer>
         </>
     )

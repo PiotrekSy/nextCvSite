@@ -18,7 +18,7 @@ const Hero = () => {
                         <p className={styles.outlinedTextNone}>Web Apps</p>
                         <p className={styles.whiteText}>I’m a frontend developer specializing in building digital </p>
                         <p className={styles.whiteText}>experiences mainly using React.js and React Native.</p>
-                        <p className={styles.whiteText}>Currently I invest my time in learning MOBILE technologies.</p>
+                        <p className={styles.whiteText}>Currently I invest my time in learning backend technologies.</p>
                     </div>
                 </div>
             </Container>

@@ -1,5 +1,5 @@
 .navbarText {
-    color: #ca3858;
+    color: rgb(130, 130, 130);
     font-size: 18px;
     transition-property: color;
     transition-duration: 200ms;
@@ -14,7 +14,7 @@
     border: none;
 
     &:hover {
-        color: #c92fe4;
+        color: white;
         transition-property: color;
         transition-duration: 300ms;
         transition-timing-function: ease-in-out;

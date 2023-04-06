@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,8 +7,6 @@ import MuiAppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import styles from './NavigationWeb.module.scss';
-import LaunchOutlinedIcon from '@mui/icons-material/LaunchOutlined';
-
 
 const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -30,10 +28,10 @@ const AppBar = styled(MuiAppBar, {
 const NavigationWeb = () => {
 
     const [value, setValue] = useState(0);
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
 
     return (
         <AppBar
@@ -45,24 +43,20 @@ const NavigationWeb = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 cursor: 'pointer',
-                boxShadow: 'none',
-                // background: 'rgba(228, 228, 228, 0.586)',
-                // backdropFilter: 'blur(50px)',
-                // webkitBackdropFilter: 'blur(7px)',
-                // borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+                boxShadow: 'none'
             }}>
             <Toolbar>
-                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none", color: "white" }} component="a" href='#home'>
+                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none"}} component="a" href='#home'>
                     <div className={styles.logo}>
                         <p className={styles.logoText}>PS</p>
                     </div>
                 </Typography>
                 <Tabs value={false} onChange={handleChange} centered>
-                    <Tab disableRipple className={styles.navbarText} label="About Me" sx={{ color: 'white' }} href='#about' />
-                    <Tab disableRipple className={styles.navbarText} label="Experience" sx={{ color: 'white' }} href='#experience' />
-                    <Tab disableRipple className={styles.navbarText} label="Skills" sx={{ color: 'white' }} href='#skills' />
-                    <Tab disableRipple className={styles.navbarText} label="Contact" sx={{ color: 'white' }} href='#contact' />
-                    <Tab disableRipple className={styles.navbarText} label="RESUME" sx={{ color: 'white' }}  ><LaunchOutlinedIcon /></Tab>
+                    <Tab disableRipple className={styles.navbarText} label="About Me" href='#about' />
+                    <Tab disableRipple className={styles.navbarText} label="Experience" href='#experience' />
+                    <Tab disableRipple className={styles.navbarText} label="Skills" href='#skills' />
+                    <Tab disableRipple className={styles.navbarText} label="Contact" href='#contact' />
+                    <Tab disableRipple className={styles.navbarText} label="RESUME" />
                 </Tabs>
             </Toolbar>
         </AppBar>

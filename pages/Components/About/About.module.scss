@@ -1,11 +1,196 @@
 .section {
+    z-index: -3;
+    overflow: hidden;
+    position: relative;
     height: 100vh;
     width: 100%;
-    background-color: rgb(152, 80, 80);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.text {
-    color: #B42242
+
+    .backgroundShapeOne {
+        z-index: -1;
+        position: absolute;
+        height: 950px;
+        width: 150%;
+        top: -950px;
+        right: -700px;
+        background: radial-gradient(#19211e, #517469);
+        box-shadow: 0 0 100px 20px #51746950;
+        transform: rotate(25deg);
+        transition-property: box-shadow;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+
+        @media screen and (max-width: 900px) {
+            height: 100%;
+            width: 100%;
+            bottom: -950px;
+            right: -300px;
+        }
+    }
+
+    .backgroundShapeTwo {
+        z-index: -2;
+        position: absolute;
+        height: 1800px;
+        width: 150%;
+        top: -50px;
+        right: 0px;
+        background: linear-gradient(#51746942 0%, #000000 40%);
+
+        &:hover {
+            transition-property: box-shadow;
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+        }
+
+        @media screen and (max-width: 900px) {
+            height: 550px
+        }
+    }
+
+    .avatarContainer {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 70px;
+
+        .innerAvatarContainer {
+            height: 330px;
+            width: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .curvedText {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            animation: rotateText 30s linear infinite;
+        }
+
+        @keyframes rotateText {
+            0% {
+                transform: rotate(-360deg)
+            }
+
+            ;
+
+            100% {
+                transform: rotate(0deg)
+            }
+
+            ;
+        }
+
+        .curvedText span {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            font-size: 34px;
+            color: white;
+            transform-origin: 0 200px;
+        }
+    }
+
+    .textContainer {
+        width: 50%;
+
+        .greeting {
+            font-size: 44px;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .description {
+            font-size: 24px;
+            color: white;
+            font-weight: 100;
+            line-height: 1.2;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .avatarContainer {
+            position: relative;
+            height: 350px;
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto;
+
+            .innerAvatarContainer {
+                height: 290px;
+                width: 290px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .curvedText {
+                position: absolute;
+                height: 350px;
+                width: 350px;
+                animation: rotateText 40s linear infinite;
+            }
+
+            @keyframes rotateText {
+                0% {
+                    transform: rotate(-360deg)
+                }
+
+                ;
+
+                100% {
+                    transform: rotate(0deg)
+                }
+
+                ;
+            }
+
+            .curvedText span {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                font-size: 34px;
+                color: white;
+                transform-origin: 0 180px;
+            }
+        }
+
+        .textContainer {
+            width: 90%;
+
+            .greeting {
+                text-align: center;
+                font-size: 40px;
+                color: white;
+                margin: 60px 0;
+            }
+
+            .description {
+                display: flex;
+                align-items: flex-end;
+                justify-content: right;
+                text-align: center;
+
+                font-size: clamp(13px, 3.5vw, 26px);
+                line-height: clamp(16px, 22px, 22px);
+                -webkit-text-stroke: 0;
+            }
+        }
+    }
 }
