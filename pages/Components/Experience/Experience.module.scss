@@ -11,14 +11,32 @@
     flex-direction: column;
 
     .textContainer {
-        border: 1px solid red;
-        height: 50vh;
+        max-height: 50vh;
+
+        .dates {
+            text-align: left;
+            font-size: 20px;
+            color: white;
+            margin: 15px 0 5px 0;
+        }
+
+        .description {
+            display: flex;
+            text-align: left;
+            align-items: flex-end;
+            justify-content: left;
+            -webkit-text-stroke: 0;
+            font-size: clamp(12px, 2vw, 16px);
+            line-height: clamp(14px, 22px, 22px);
+            font-weight: 200;
+        }
     }
 
     .portfolioContainer {
         border: 1px solid red;
-        height: 50vh
+        min-height: 50vh
     }
+
 
     @media (max-width: 900px) {}
 
