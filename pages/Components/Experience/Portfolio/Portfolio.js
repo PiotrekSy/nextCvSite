@@ -1,30 +1,51 @@
 import * as React from 'react';
+import Image from 'next/image';
 import styles from './Portfolio.module.scss';
-import Container from '@mui/material/Container';
-import { Section as FullPageSection } from 'react-fullpage';
+
+const projects = [
+    {
+        picture: "/foodApp.jpg",
+        name: "Zaplanuj jedzonko",
+        description: "Meal Planning Web App connected to Firebase (Authentication and Storage). Possible adding and reading recipes from personal Firestore storage after login.",
+        usedTechnologies: " firebase-auth, firestore, scss, react-scroll, react-carousel, react-router, react-hash-router,  "
+    },
+    {
+        picture: "/prepper.jpg",
+        name: "Mr. Prepper",
+        description: "Backpacking Web App connected to Firebase (Authentication and Storage). Simple checklist for Backpackers, with the usage of MapBox.",
+        usedTechnologies: " firebase-auth, firestore, scss, react-scroll, react-carousel, react-router, react-hash-router,  "
+    },
+    {
+        picture: "/sharing.jpg",
+        name: "Sharing",
+        description: "Web App written for a fictional company that provides a tool for sharing clothes and belongings with people in need. Used Firebase with a few libraries for authentication and contact forms. ",
+        usedTechnologies: " firebase-auth, firestore, scss, react-scroll, react-carousel, react-router, react-hash-router,  "
+    },
+];
+
 
 const Portfolio = () => {
 
-    return <FullPageSection style={{ pointerEvents: 'none', position: 'relative' }}>
-        <div className={styles.section}>
-            <Container maxWidth="lg"
-                className={styles.section}
-                sx={{
-                    display: 'flex',
-                    alignItems: 'center'
-                }}>
-                <div className={styles.textContainer}>
-                    <p className={styles.greeting}>Portfolio</p>
-                    <p className={styles.description} >After several years of working in the construction industry,
-                        I have decided to change my career path. My passion for new technologies has led me to the IT industry.
-                        Since mid-2022, I have been constantly seeking new opportunities for growth. My skill set is defined
-                        by an analytical approach that is complemented by an unwavering commitment to acquiring knowledge and
-                        assimilating novel technologies.
-                    </p>
-                </div>
-            </Container>
+    return (
+        <div className={styles.projects}>
+            {projects?.map((item, index) => {
+                return (
+                    <div key={index}
+                        className={styles.card}>
+                        <div className={styles.image}>
+                            <Image src={item.picture}
+                                fill
+                                alt={item.picture} />
+                        </div>
+                        <p className={styles.title}>{item.name}</p>
+                        <p className={styles.description}>{item.description}</p>
+                        <p className={styles.technologiesUsedTitle}>Technologies used:</p>
+                        <p className={styles.technologies}>{item.usedTechnologies}</p>
+                    </div>
+                )
+            })}
         </div>
-    </FullPageSection>
+    )
 };
 
 export default Portfolio;

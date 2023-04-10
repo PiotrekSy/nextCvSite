@@ -1,8 +1,8 @@
 import styles from './About.module.scss';
 import * as React from 'react';
+import Image from 'next/image';
 import Container from '@mui/material/Container';
 import { Section as FullPageSection } from 'react-fullpage';
-import Image from 'next/image';
 
 const text = 'PIOTR SYJUD - FRONTEND DEVELOPER - ';
 
@@ -19,9 +19,9 @@ const curvedText = text.split("")
 
 const About = ({ direction }) => {
 
-    return <FullPageSection style={{ pointerEvents: 'none' }}>
+    return <FullPageSection style={{ pointerEvents: 'none' }} >
         <div className={styles.section}>
-            <Container Container maxWidth="lg"
+            <Container maxWidth="lg"
                 sx={{
                     display: 'flex',
                     flexDirection: direction,

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import styles from './Hero.module.scss';
 import Container from '@mui/material/Container';
-import { Section as FullPageSection } from 'react-fullpage';
 
 const Hero = () => {
-    return <FullPageSection style={{ pointerEvents: 'none' }}>
+    return (
         <div className={styles.section}>
             <div className={styles.backgroundBlobOne}></div>
             <div className={styles.backgroundBlobTwo}></div>
@@ -22,8 +21,7 @@ const Hero = () => {
                     </div>
                 </div>
             </Container>
-        </div>
-    </FullPageSection>
+        </div>)
 };
 
 export default Hero;

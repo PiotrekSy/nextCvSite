@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
@@ -46,10 +47,10 @@ const NavigationWeb = () => {
                 boxShadow: 'none'
             }}>
             <Toolbar>
-                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none" }} href='#home'>
-                    <div className={styles.logo}>
+                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none" }} >
+                    <a className={styles.logo} href='#home' style={{ flexGrow: 1, textDecoration: "none" }} >
                         <p className={styles.logoText}>PS</p>
-                    </div>
+                    </a>
                 </Typography>
                 <Tabs value={false} onChange={handleChange} centered>
                     <Tab disableRipple className={styles.navbarText} label="About Me" href='#about' sx={{ color: 'lightgrey' }} />
