@@ -1,33 +1,31 @@
 import * as React from 'react';
-import styles from './Portfolio.module.scss';
-import Container from '@mui/material/Container';
-import { Section as FullPageSection } from 'react-fullpage';
-import { Carousel } from 'react-responsive-carousel';
+import Image from 'next/image';
 import { projects } from './projects';
+import styles from './Portfolio.module.scss';
+
 
 const Portfolio = () => {
 
-    return <FullPageSection style={{ pointerEvents: 'none', position: 'relative' }}>
-        <div className={styles.section}>
-            <Container maxWidth="lg"
-                className={styles.section}
-                sx={{
-                    display: 'flex',
-                    alignItems: 'center'
-                }}>
-                <div className={styles.carouselContainer}>
-                    <Carousel >
-                        {projects.map((item, index) =>
-                            <div key={index}
-                                // className={styles.carouselItem}
-                                >
-                                <p className={styles.itemName}>{item.name}</p>
-                            </div>)}
-                    </Carousel>
-                </div>
-            </Container>
+    return (
+        <div className={styles.projects}>
+            {projects?.map((item, index) => {
+                return (
+                    <div key={index}
+                        className={styles.card}>
+                        <div className={styles.image}>
+                            <Image src={item.picture}
+                                fill
+                                alt={item.picture} />
+                        </div>
+                        <p className = {styles.title}>{item.name}</p>
+                        <p className = {styles.description}>{item.description}</p>
+                        <p className = {styles.technologiesUsedTitle}>Technologies used:</p>
+                        <p className = {styles.technologies}>{item.usedTechnologies}</p>
+                    </div>
+                )
+            })}
         </div>
-    </FullPageSection>
+    )
 };
 
 export default Portfolio;

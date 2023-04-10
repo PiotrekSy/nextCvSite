@@ -2,10 +2,9 @@ import * as React from 'react';
 import Portfolio from './Portfolio';
 import styles from './Experience.module.scss';
 import Container from '@mui/material/Container';
-import { Section as FullPageSection } from 'react-fullpage';
 
 const Experience = ({ direction }) => {
-    return <FullPageSection style={{ pointerEvents: 'none' }}>
+    return (
         <Container maxWidth="lg"
             className={styles.section}
             sx={{
@@ -32,7 +31,7 @@ const Experience = ({ direction }) => {
             </div>
             <Portfolio />
         </Container>
-    </FullPageSection>
+    )
 };
 
 export default Experience;

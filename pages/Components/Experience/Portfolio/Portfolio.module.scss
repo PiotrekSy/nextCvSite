@@ -1,20 +1,63 @@
-.section {
-    z-index: -3;
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: black;
+.projects {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 90%;
+    margin-top: 20px;
+    overflow-x: scroll; 
 
-    .carouselContainer {
-        border: 1px solid red;
-        height: 50vh;
-        min-width: 100%;
-        margin-top: 20px;
+    .card {
+        height: 80%;
+        min-width: 290px;
+        width: 290px;
+        background-color: black;
+        border-radius: 25px;
+        margin: 0 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: scale 300ms ease-in-out;
+        border: 1px solid grey;
+
+        &:hover {
+            transition: scale 300ms ease-in-out;
+            scale: 1.05;
+        }
+
+        .image {
+            position: relative;
+            height: 50%;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px 0;
+        }
+
+        .description {
+            font-size: 12px;
+            padding: 0 5px;
+            width: 90%;
+        }
+
+        .technologiesUsedTitle {
+            font-size: 12px;
+            padding: 0 5px;
+            width: 90%;
+            font-weight: 600;
+        }
+
+        .technologies {
+            font-size: 12px;
+            padding: 0 5px;
+            width: 90%;
+        }
+
     }
 
     @media (max-width: 900px) {}
