@@ -29,22 +29,18 @@ const Portfolio = () => {
 
     return (
         <Carousel
+            autoPlay={false}
             fullHeightHover={true}
-            next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
-            prev={(prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
-            className={styles.projects}
-        >
+            animation={'slide'}
+            className={styles.projects}>
             {projects.map((item, index) => {
                 return (
                     <div key={index}
                         className={styles.card}>
                         <div className={styles.image}>
                             <Image src={item.picture}
-                                // width={1250}
-                                // height={750}
                                 fill
                                 alt={item.picture} />
-
                         </div>
                         <div className={styles.text}>
                             <p className={styles.title}>{item.name}</p>
@@ -53,7 +49,7 @@ const Portfolio = () => {
                             <p className={styles.technologies}>{item.usedTechnologies}</p>
                             <div className={styles.buttons}>
                                 <Button className="CheckButton">
-                                    Web App
+                                    Link
                                 </Button>
                                 <Button className="CheckButton">
                                     GitHub
