@@ -4,6 +4,7 @@ import * as React from 'react';
 import Skills from '../Skills';
 import Navbar from "../Navbar";
 import Experience from '../Experience';
+import styles from "./HomePage.module.scss"
 import ContactForm from '../ContactForm';
 import { ScrollToTopOnMount, SectionsContainer } from 'react-fullpage';
 import { useState, useEffect } from 'react';
@@ -17,7 +18,7 @@ const HomePage = () => {
         scrollBar: false,
         navigation: false,
         verticalAlign: false,
-        arrowNavigation: true
+        arrowNavigation: true,
     };
 
     const [windowSize, setWindowSize] = useState();
@@ -29,8 +30,8 @@ const HomePage = () => {
         <>
             <Navbar direction={direction} />
             <ScrollToTopOnMount />
-            <SectionsContainer className="container" {...options}>
-                <Hero />
+            <SectionsContainer className={styles.container} {...options}>
+                <Hero direction={direction} />
                 <About direction={direction} />
                 <Experience direction={direction} />
                 <Skills direction={direction} />

@@ -2,80 +2,39 @@
     z-index: -3;
     overflow: hidden;
     position: relative;
-    height: 100vh;
-    width: calc(100% - 530px);
-    background-color: black;
+    max-height: calc(100vh - 175px);
+    min-height: 800px;
+    width: 350px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 15px;
+    flex-direction: column;
+    margin-left: 30px;
+    border: 1px solid rgb(84, 84, 84);
 
     .avatarContainer {
         position: relative;
-        height: 400px;
-        width: 400px;
+        height: 270px;
+        width: 270px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-        margin: 0 70px;
+        border-radius: 300px;
+        border: 1px solid rgb(84, 84, 84);
 
         .innerAvatarContainer {
-            height: 330px;
-            width: 330px;
+            height: 270px;
+            width: 270px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            border-radius: 300px;
             overflow: hidden;
         }
-
-        .curvedText {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            animation: rotateText 30s linear infinite;
-        }
-
-        @keyframes rotateText {
-            0% {
-                transform: rotate(-360deg)
-            }
-
-            ;
-
-            100% {
-                transform: rotate(0deg)
-            }
-
-            ;
-        }
-
-        .curvedText span {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            font-size: 34px;
-            color: white;
-            transform-origin: 0 200px;
-        }
     }
 
-    .textContainer {
-        width: 50%;
-
-        .greeting {
-            font-size: 44px;
-            color: white;
-            margin: 20px 0;
-        }
-
-        .description {
-            font-size: 24px;
-            color: white;
-            font-weight: 100;
-            line-height: 1.2;
-        }
-    }
 
     @media screen and (max-width: 899px) {
         z-index: -3;

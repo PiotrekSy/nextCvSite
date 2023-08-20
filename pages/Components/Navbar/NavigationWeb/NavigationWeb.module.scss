@@ -1,6 +1,14 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 30px;
+    margin-right: 30px;
+}
+
 .navbarText {
     color: lightgrey;
-    font-size: 18px;
+    font-size: 10px;
     transition-property: color;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
@@ -10,8 +18,11 @@
     transition-timing-function: ease-in-out;
     margin: 10px;
     border-radius: 30px;
-    min-width: 150px;
-    border: none;
+    border: 1px solid rgb(84, 84, 84);
+
+    height: 30px;
+    width: 30px;
+
 
     &:hover {
         color: white;
@@ -30,13 +41,4 @@
     width: 80px;
     background: black;
     -webkit-text-stroke: 7px transparent;
-}
-
-.logoText {
-    font-size: 50px;
-    color: transparent;
-    -webkit-text-fill-color: black;
-    background: linear-gradient(to right, #e42f50, #c92fe4);
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
 }

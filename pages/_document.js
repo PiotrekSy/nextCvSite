@@ -6,7 +6,7 @@ export default function Document() {
             <Head >
                 <meta name="color-scheme" content="only light" />
             </Head>
-            <body>
+            <body style={{height: 0}}>
                 <Main />
                 <NextScript />
             </body>

@@ -1,13 +1,9 @@
 import * as React from 'react';
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
-import Toolbar from '@mui/material/Toolbar';
+import { useState, useEffect } from 'react';
 import MuiAppBar from '@mui/material/AppBar';
-import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import styles from './NavigationWeb.module.scss';
+import AbsoluteProfile from './AbsoluteProfile';
 
 const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -28,11 +24,32 @@ const AppBar = styled(MuiAppBar, {
 
 const NavigationWeb = () => {
 
-    const [value, setValue] = useState(0);
+    const [activeSection, setActiveSection] = useState('');
+
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
+    useEffect(() => {
+        // Get the initial hash value from the URL
+        const initialHash = window.location.hash.slice(1); // Remove the '#' symbol
+
+        if (initialHash) {
+            setActiveSection(initialHash);
+        }
+
+        const handleHashChange = () => {
+            const newHash = window.location.hash.slice(1); // Remove the '#' symbol
+            setActiveSection(newHash);
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
 
     return (
         <AppBar
@@ -40,26 +57,22 @@ const NavigationWeb = () => {
             sx={{
                 textDecoration: 'none',
                 backgroundColor: 'transparent',
-                minHeight: '100px',
                 display: 'flex',
-                justifyContent: 'center',
+                height: '100vh',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
                 cursor: 'pointer',
                 boxShadow: 'none'
             }}>
-            <Toolbar>
-                <Typography variant="h3" noWrap sx={{ flexGrow: 1, textDecoration: "none" }} >
-                    <a className={styles.logo} href='#home' style={{ flexGrow: 1, textDecoration: "none" }} >
-                        <p className={styles.logoText}>PS</p>
-                    </a>
-                </Typography>
-                <Tabs value={false} onChange={handleChange} centered>
-                    <Tab disableRipple className={styles.navbarText} label="About Me" href='#about' sx={{ color: 'lightgrey' }} />
-                    <Tab disableRipple className={styles.navbarText} label="Experience" href='#experience' sx={{ color: 'lightgrey' }} />
-                    <Tab disableRipple className={styles.navbarText} label="Skills" href='#skills' sx={{ color: 'lightgrey' }} />
-                    <Tab disableRipple className={styles.navbarText} label="Contact" href='#contact' sx={{ color: 'lightgrey' }} />
-                    <Tab disableRipple className={styles.navbarText} label="RESUME" sx={{ color: 'lightgrey' }} />
-                </Tabs>
-            </Toolbar>
+            <AbsoluteProfile />
+            <div onChange={handleChange} className={styles.navigation}>
+                <a disableRipple className={styles.navbarText} href='#home' style={{ backgroundColor: activeSection === 'home' ?  'red' : 'transparent'}}/>
+                <a disableRipple className={styles.navbarText} href='#about' style={{ backgroundColor: activeSection === 'about' ?  'red' : 'transparent'}}/>
+                <a disableRipple className={styles.navbarText} href='#experience' style={{ backgroundColor: activeSection === 'experience' ?  'red' : 'transparent'}}/>
+                <a disableRipple className={styles.navbarText} href='#skills' style={{ backgroundColor: activeSection === 'skills' ?  'red' : 'transparent'}}/>
+                <a disableRipple className={styles.navbarText} href='#contact' style={{ backgroundColor: activeSection === 'contact' ?  'red' : 'transparent'}}/>
+            </div>
         </AppBar>
     );
 }

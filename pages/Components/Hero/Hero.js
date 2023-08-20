@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './Hero.module.scss';
 import Container from '@mui/material/Container';
 
-const Hero = () => {
+const Hero = ({direction}) => {
     return (
         <div className={styles.section}>
             <div className={styles.backgroundBlobOne}></div>
